@@ -13,6 +13,12 @@
 		85858B8D242D081400C5ECA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85858B8C242D081400C5ECA2 /* Assets.xcassets */; };
 		85858B90242D081400C5ECA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85858B8E242D081400C5ECA2 /* LaunchScreen.storyboard */; };
 		85858BA0242D0A9200C5ECA2 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85858B9F242D0A9200C5ECA2 /* CloudKit.framework */; };
+		B556180226C1C4AC00F3299F /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556180126C1C4AC00F3299F /* Entry.swift */; };
+		B556180426C1CFC700F3299F /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556180326C1CFC700F3299F /* EntryController.swift */; };
+		B556180626C1D1F600F3299F /* EntryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556180526C1D1F600F3299F /* EntryError.swift */; };
+		B556180926C1DA9300F3299F /* EntryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556180826C1DA9300F3299F /* EntryTableViewController.swift */; };
+		B556180B26C1DD2900F3299F /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556180A26C1DD2900F3299F /* DateFormatter.swift */; };
+		B556180D26C1DF8700F3299F /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556180C26C1DF8700F3299F /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +31,12 @@
 		85858B91242D081400C5ECA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85858B9D242D0A8B00C5ECA2 /* CloudKitJournal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CloudKitJournal.entitlements; sourceTree = "<group>"; };
 		85858B9F242D0A9200C5ECA2 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		B556180126C1C4AC00F3299F /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		B556180326C1CFC700F3299F /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
+		B556180526C1D1F600F3299F /* EntryError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryError.swift; sourceTree = "<group>"; };
+		B556180826C1DA9300F3299F /* EntryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTableViewController.swift; sourceTree = "<group>"; };
+		B556180A26C1DD2900F3299F /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		B556180C26C1DF8700F3299F /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +72,11 @@
 			isa = PBXGroup;
 			children = (
 				85858B9D242D0A8B00C5ECA2 /* CloudKitJournal.entitlements */,
-				85858B89242D081200C5ECA2 /* Main.storyboard */,
+				B556180026C1C49100F3299F /* Models */,
+				B55617FD26C1C48100F3299F /* Controllers */,
+				B55617FB26C1C47000F3299F /* Views */,
 				85858B97242D082D00C5ECA2 /* Resources */,
+				B556180726C1D1F900F3299F /* Helpers and Extensions */,
 			);
 			path = CloudKitJournal;
 			sourceTree = "<group>";
@@ -72,7 +87,6 @@
 				85858B83242D081200C5ECA2 /* AppDelegate.swift */,
 				85858B85242D081200C5ECA2 /* SceneDelegate.swift */,
 				85858B8C242D081400C5ECA2 /* Assets.xcassets */,
-				85858B8E242D081400C5ECA2 /* LaunchScreen.storyboard */,
 				85858B91242D081400C5ECA2 /* Info.plist */,
 			);
 			path = Resources;
@@ -84,6 +98,66 @@
 				85858B9F242D0A9200C5ECA2 /* CloudKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B55617FB26C1C47000F3299F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B55617FC26C1C47B00F3299F /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B55617FC26C1C47B00F3299F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				85858B89242D081200C5ECA2 /* Main.storyboard */,
+				85858B8E242D081400C5ECA2 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B55617FD26C1C48100F3299F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B55617FF26C1C48D00F3299F /* ModelControllers */,
+				B55617FE26C1C48700F3299F /* ViewControllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B55617FE26C1C48700F3299F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B556180826C1DA9300F3299F /* EntryTableViewController.swift */,
+				B556180C26C1DF8700F3299F /* DetailsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B55617FF26C1C48D00F3299F /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B556180326C1CFC700F3299F /* EntryController.swift */,
+			);
+			path = ModelControllers;
+			sourceTree = "<group>";
+		};
+		B556180026C1C49100F3299F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B556180126C1C4AC00F3299F /* Entry.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B556180726C1D1F900F3299F /* Helpers and Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B556180526C1D1F600F3299F /* EntryError.swift */,
+				B556180A26C1DD2900F3299F /* DateFormatter.swift */,
+			);
+			path = "Helpers and Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,7 +187,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = "Zebadiah Watson";
 				TargetAttributes = {
 					85858B7F242D081200C5ECA2 = {
@@ -157,7 +231,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B556180226C1C4AC00F3299F /* Entry.swift in Sources */,
+				B556180626C1D1F600F3299F /* EntryError.swift in Sources */,
 				85858B84242D081200C5ECA2 /* AppDelegate.swift in Sources */,
+				B556180D26C1DF8700F3299F /* DetailsViewController.swift in Sources */,
+				B556180B26C1DD2900F3299F /* DateFormatter.swift in Sources */,
+				B556180426C1CFC700F3299F /* EntryController.swift in Sources */,
+				B556180926C1DA9300F3299F /* EntryTableViewController.swift in Sources */,
 				85858B86242D081200C5ECA2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,6 +290,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -270,6 +351,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -303,15 +385,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CloudKitJournal/CloudKitJournal.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4J7B9732LY;
+				DEVELOPMENT_TEAM = A5WKQ59823;
 				INFOPLIST_FILE = "$(SRCROOT)/CloudKitJournal/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = CloudKitJournal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BenEreksonIsReallyBored.CloudKitJournal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -322,15 +406,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CloudKitJournal/CloudKitJournal.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4J7B9732LY;
+				DEVELOPMENT_TEAM = A5WKQ59823;
 				INFOPLIST_FILE = "$(SRCROOT)/CloudKitJournal/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = CloudKitJournal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BenEreksonIsReallyBored.CloudKitJournal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
